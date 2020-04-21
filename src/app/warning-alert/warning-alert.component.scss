@@ -1,0 +1,32 @@
+@keyframes changeRed {
+  from {color: red;}
+  to {color: indianred;}
+}
+
+@keyframes flashing {
+  14% {color: red;}
+  28% {color: orange;}
+  42% {color: yellow;}
+  56% {color: blue;}
+  70% {color: indigo;}
+  84% {color: violet;}
+  100% {color: red;}
+
+
+}
+h1{
+  color : red;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+h1:hover{
+  text-align: center;
+  background-color: aliceblue;
+  animation: flashing 500ms linear infinite;
+
+}
+
