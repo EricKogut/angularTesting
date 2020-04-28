@@ -14,7 +14,7 @@
 <input
   type = text
   class = "form-control"
-  [(ngModel)] = "serverName"
+
 >
 
 <!-- PROPERTY BINDING IS USED HERE FOR THE BUTTON -->
@@ -27,11 +27,9 @@
 <p [innerText] = "allowNewServer"></p>
 
 
-<app-server>
+<app-server *ngFor="let server of servers">
 
 </app-server>
-
-
 
 <!-- THIS IS THE ASSIGNMENT -->
 
