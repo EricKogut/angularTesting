@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
   allowNewServer = false;
+  validUserName = false;
   serverCreationStatus = "No server created"
   serverName ='TestServer';
-
+  userName = 'Enter Username here';
 
   constructor() {
     setTimeout(() => {
@@ -30,6 +31,16 @@ export class ServersComponent implements OnInit {
 
   onUpdateServerName(event:any){
     this.serverName= (<HTMLInputElement>event.target).value;
+  }
+
+  checkUsername(event:any){
+    if((<HTMLInputElement>event.target).value.length == 0){
+      this.validUserName = false;
+  }else this.validUserName = true;
+  }
+
+  resetUsername(){
+    this.userName = '';
   }
 
 }

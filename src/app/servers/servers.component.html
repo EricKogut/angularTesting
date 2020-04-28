@@ -11,28 +11,36 @@
 
 <!-- THIS IS AN EXAMPLE OF TWO WAY BINDING (INPUT + BUTTON) -->
 
-<input
-  type = text;
+<!-- <input
+  type = text
   class = "form-control"
   [(ngModel)] = "serverName"
-  >
-
-
+> -->
 
 <!-- PROPERTY BINDING IS USED HERE FOR THE BUTTON -->
-<button   class = "btn btn-primary"
+<!-- <button   class = "btn btn-primary"
           [disabled] = "!allowNewServer"
           (click) = "onCreateServer()">
           Add Server</button>
-
-
-
-
 <p>{{serverCreationStatus}}</p>
+<p [innerText] = "allowNewServer"></p> -->
 
 
-<p [innerText] = "allowNewServer"></p>
+<!-- THIS IS THE ASSIGNMENT -->
+
+<p>
+  {{userName}}
+</p>
+
+<input
+  type = text;
+  class = form-control
+  (input) = "checkUsername($event)"
+  [(ngModel)] = "userName"
+>
 
 
-<app-server>
-</app-server>
+<button   class = "btn btn-primary"
+          [disabled] = "userName === ''"
+          (click) = "resetUsername()">
+          Reset Username</button>
