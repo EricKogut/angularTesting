@@ -8,3 +8,13 @@
 <app-warning-alert></app-warning-alert>
 
 <app-servers></app-servers>
+
+
+
+<button class ="btn tbn-prmary"
+        (click) = "onToggle()">Uncover the Truth</button>
+<p *ngIf = showTruth >THE CAKE IS A LIE</p>
+<div  *ngFor = "let logItem of log; let i = index"
+      [ngStyle] = "{backgroundColor: logItem >= 5? 'blue' : 'transparent'}"
+      ng-class = "{'white-text': logItem >=5 }"
+>{{logItem}}</div>

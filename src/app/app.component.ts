@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
+  showTruth = false;
+  log = [];
+
+
+  onToggle(){
+    this.showTruth = !this.showTruth;
+    this.log.push(new Date());
+  }
 }
