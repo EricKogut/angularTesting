@@ -1,3 +1,11 @@
 <p [ngStyle] = "{backgroundColor : getColor()}"
-    [ngClass] = "{online: serverStatus === 'online'}">
+    [ngClass] = "{'online': serverStatus == 'online'}"
+    >
   {{'server'}} with ID {{serverId}} is {{serverStatus}}</p>
+
+
+  <li
+  *ngClass = "['online']"
+  >
+{{'servegr'}} with ID {{serverId}} is {{serverStatus}}</li>
+
